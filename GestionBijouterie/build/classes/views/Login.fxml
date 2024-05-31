@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#connecter" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.LoginController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="325.0" styleClass="gradient" stylesheets="@login.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="325.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="DIAMOND" layoutX="83.0" layoutY="194.0" size="10em" AnchorPane.bottomAnchor="186.95714569091797" />
+                  <Label alignment="CENTER" layoutX="12.0" layoutY="227.0" prefHeight="29.0" prefWidth="288.0" text="Platforme de gestion de vente de bijouterie" textFill="WHITE" AnchorPane.bottomAnchor="144.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="81.0" layoutY="51.0" prefHeight="29.0" prefWidth="152.0" text="To-Bijou" textFill="WHITE" AnchorPane.bottomAnchor="320.0" AnchorPane.topAnchor="51.0">
+                     <font>
+                        <Font name="Trebuchet MS Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="WHITE" glyphName="GE" layoutX="14.0" layoutY="377.0" size="2.5em" AnchorPane.bottomAnchor="18.700000762939453" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="GE" layoutX="265.0" layoutY="377.0" size="2.5em" AnchorPane.bottomAnchor="18.242856979370117" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="311.0" prefHeight="400.0" prefWidth="339.0" style="-fx-background-radius: 20px 0 0 20px;" styleClass="white-form" stylesheets="@login.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="311.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="33.0" layoutY="32.0" prefHeight="40.0" prefWidth="256.0" styleClass="head-label" stylesheets="@login.css" text="Connecter à votre compte" textFill="#694820" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="51.0">
+                     <font>
+                        <Font name="Trebuchet MS Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmail" layoutX="70.0" layoutY="140.0" prefHeight="30.0" prefWidth="220.0" promptText="Entrez votre email" styleClass="textfield" stylesheets="@login.css" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font name="Trebuchet MS" size="14.0" />
+                     </font></TextField>
+                  <Hyperlink fx:id="mdpOublier" layoutX="70.0" layoutY="221.0" text="Mot de passe oublier ?" textFill="RED" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Hyperlink>
+                  <Button fx:id="btnConnection" layoutX="69.0" layoutY="251.0" mnemonicParsing="false" onAction="#connecter" prefHeight="40.0" prefWidth="220.0" styleClass="btn-login" stylesheets="@login.css" text="Se Connecter" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font name="Trebuchet MS" size="14.0" />
+                     </font></Button>
+                  <PasswordField fx:id="txtMdp" layoutX="70.0" layoutY="184.0" prefHeight="30.0" prefWidth="220.0" promptText="Mot de passe" styleClass="textfield" stylesheets="@login.css" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font name="Tempus Sans ITC" size="14.0" />
+                     </font></PasswordField>
+                  <FontAwesomeIcon glyphName="USER" layoutX="33.0" layoutY="165.0" size="2.5em" wrappingWidth="23.428571701049805" AnchorPane.rightAnchor="282.5714282989502" />
+                  <FontAwesomeIcon glyphName="LOCK" layoutX="35.0" layoutY="210.0" size="2.5em" AnchorPane.rightAnchor="282.5714282989502" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="SIGN_IN" layoutX="113.0" layoutY="277.0" size="1.5em" AnchorPane.rightAnchor="210.5714282989502" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

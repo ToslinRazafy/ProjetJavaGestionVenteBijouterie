@@ -1,0 +1,36 @@
+.gradient{
+    -fx-background-color: linear-gradient(to bottom right, #ffb300, #985b0a);
+}
+
+.white-form{
+    -fx-background-color: #ffffff;
+    /*-fx-background-radius: 20px;*/ 
+}
+
+.head-label{
+    -fx-border-color: #694820;
+    -fx-border-width: 0 0 0 3px;
+    -fx-padding: 0 0 0 5px;
+}
+
+.btn-login{
+    -fx-background-color: linear-gradient(to bottom right, #f5af25, #694820);
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+}
+
+.btn-login:hover{
+    -fx-background-color: linear-gradient(to bottom right, #b96d0f, #9b6905);
+}
+
+.textfield{
+    -fx-background-color: transparent;
+    -fx-border-width: .8px;
+    -fx-border-color: #000;
+}
+
+.textfield:focused{
+    -fx-border-color: #ffb300;
+}
