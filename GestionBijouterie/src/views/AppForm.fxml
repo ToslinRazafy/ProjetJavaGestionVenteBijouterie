@@ -683,6 +683,27 @@
                         </TableView>
                      </children>
                   </AnchorPane>
+                  <AnchorPane fx:id="paneDetailsCommande" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@appform.css" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="radius" />
+                        <String fx:value="white-bg" />
+                     </styleClass>
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="LISTES DE DETAIL DES COMMANDES">
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="14.0" layoutY="41.0" prefHeight="8.0" prefWidth="203.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                        <TableView layoutX="14.0" layoutY="100.0" prefHeight="758.0" prefWidth="1016.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="100.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
          </center>

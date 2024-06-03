@@ -335,6 +335,8 @@ public class AppFormController implements Initializable {
     
     @FXML
     private TableColumn<Commande, String> tabListComNomCli;
+    @FXML
+    private AnchorPane paneDetailsCommande;
 
     @FXML
     public void effacementChamps() {
@@ -626,6 +628,11 @@ public class AppFormController implements Initializable {
                         res1.next();
                         gesBijou.updateBijou((res1.getInt("Stock") - quantite), Integer.parseInt(txtIdBijouCom.getText()));
                         affichageCommandeTmp();
+                        alert = new Alert(AlertType.INFORMATION);
+                        alert.setTitle("message de success");
+                        alert.setHeaderText(null);
+                        alert.setContentText("La quantite " + quantite +" a ete ajouter en bijou numero " + res1.getString("Num_bijou"));
+                        alert.showAndWait();
                     } else {
                         res = gestionBijou.verify(Integer.parseInt(txtIdBijouCom.getText()));
                         res.next();
@@ -633,6 +640,11 @@ public class AppFormController implements Initializable {
                         gestion.save(comTmp);
                         gesBijou.updateBijou((res.getInt("Stock") - Integer.parseInt(txtQunatiteCommander.getText())), Integer.parseInt(txtIdBijouCom.getText()));
                         affichageCommandeTmp();
+                        alert = new Alert(AlertType.INFORMATION);
+                        alert.setTitle("message de success");
+                        alert.setHeaderText(null);
+                        alert.setContentText("Bijou numero " + res.getString("Num_bijou") + " a ete ajouter dans la commande");
+                        alert.showAndWait();
                     }
                 } catch (SQLException ex) {
                     ex.printStackTrace();
@@ -673,6 +685,7 @@ public class AppFormController implements Initializable {
                     affichageCommandeTmp();
                     effacerChampCommande();
                     numBijouList();
+                    txtNumCom.setText(String.valueOf(gestionCom.countCommande() + 1));
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
@@ -1054,9 +1067,6 @@ public class AppFormController implements Initializable {
     @FXML
     public void afficherCommande() {
         LocalDate date = LocalDate.now();
-        int annne = date.getYear();
-        int jours = date.getDayOfMonth();
-        int mois = date.getMonthValue();
         paneCommande.setVisible(true);
         paneClient.setVisible(false);
         panelMenu.setVisible(false);
@@ -1067,7 +1077,7 @@ public class AppFormController implements Initializable {
         idClientList();
         numBijouList();
         affichageCommandeTmp();
-        laeblDateCommande.setText(String.valueOf(jours)+"-0"+String.valueOf(mois)+"-"+String.valueOf(annne));
+        laeblDateCommande.setText(date.toString());
     }
     
     @FXML
@@ -1077,6 +1087,7 @@ public class AppFormController implements Initializable {
         paneClient.setVisible(false);
         paneBijou.setVisible(false);
         paneCommande.setVisible(false);
+        affichageListeCommande();
     }
 
     public void masquerButton() {
